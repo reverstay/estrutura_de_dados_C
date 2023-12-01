@@ -84,7 +84,7 @@ void clearBuffer() {
 
 int isAlphaNumericHyphen(const char *str) {
     for (int i = 0; str[i] != '\0'; i++) {
-        if (!isalnum(str[i]) && str[i] != '-') {
+        if (!isalnum(str[i]) && str[i] != ' ' && str[i] != '-') {
             return 0; // Não é alfanumérico, incluindo '-'
         }
     }
@@ -178,7 +178,7 @@ void adicionarVoo() {
         printf("\nInforme o Modelo:\n ");
     
     // Usar scanf para ler uma string
-    if (scanf("%s", novoVoo->Modelo) != 1) {
+    if (scanf("%[^\n]", novoVoo->Modelo) != 1) {
         // Se a leitura falhar, limpar o buffer de entrada e informar o usuário
         printf("Erro na leitura. Por favor, tente novamente.\n");
 
