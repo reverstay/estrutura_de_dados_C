@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-// Raphael Leite Diniz a2358549
+// Ramon miguel pinto marino
 
 typedef struct no {
   float valor;
