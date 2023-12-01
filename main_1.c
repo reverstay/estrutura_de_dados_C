@@ -7,10 +7,6 @@
 #define MAX_TELEFONE 20
 #define MAX_ANIVERSARIO 6
 
-//Raphael Leite Diniz 2358549
-//Mauricio Tuyuty Lopes de Carvalho 1987291
-//Arthur Bernardes Schmidt 2129760
-
 typedef struct Contato {
     char nome[MAX_NOME];
     char email[MAX_EMAIL];
@@ -171,13 +167,13 @@ void exibir_menu_consulta() {
     printf("\nMenu de Consulta\n");
     printf("1. Consultar por Nome\n");
     printf("2. Consultar por Email\n");
-    printf("3. Consultar por Mês de Aniversário\n");
+    printf("3. Consultar por MÃªs de AniversÃ¡rio\n");
     printf("4. Voltar ao Menu Principal\n");
 }
 
 void formatar_telefone(char* telefone) {
     while (1) {
-        // Remover caracteres não numéricos do telefone
+        // Remover caracteres nÃ£o numÃ©ricos do telefone
         int tamanho = strlen(telefone);
         int i, j = 0;
         char telefone_formatado[MAX_TELEFONE];
@@ -188,14 +184,14 @@ void formatar_telefone(char* telefone) {
         }
         telefone_formatado[j] = '\0';
 
-        // Verificar o tamanho do número de telefone e formatar adequadamente
+        // Verificar o tamanho do nÃºmero de telefone e formatar adequadamente
         tamanho = strlen(telefone_formatado);
         if (tamanho == 11) {
             sprintf(telefone, "(%c%c) %c%c%c%c%c-%c%c%c%c", telefone_formatado[0], telefone_formatado[1],
                     telefone_formatado[2], telefone_formatado[3], telefone_formatado[4], telefone_formatado[5],
                     telefone_formatado[6], telefone_formatado[7], telefone_formatado[8], telefone_formatado[9],
                     telefone_formatado[10]);
-            break; // Saia do loop se o telefone for válido
+            break; // Saia do loop se o telefone for vÃ¡lido
         } else {
             printf("Numero de telefone invalido. Utilize o formato DDD + Numero (11 digitos).\n");
             printf("Digite o telefone novamente: ");
@@ -262,7 +258,7 @@ int main() {
 
                 else if (strcmp(opcao, "3") == 0) {
                     char mes[3];
-                    printf("Mês de aniversario [mm]: ");
+                    printf("MÃªs de aniversario [mm]: ");
                     scanf(" %[^\n]s", mes);
                     printf("Contatos encontrados:\n");
                     buscar_contato_mes_aniversario(agenda.raiz, mes);
