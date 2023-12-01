@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Raphael Leite Diniz 2358549
+// Ramon miguel pinto marino
 
 struct clista {
     int info;
