@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-//Raphael Leite Diniz 2358549
+// Ramon miguel pinto marino
 
 typedef struct no{
     int dado;
@@ -47,7 +46,7 @@ void printArv(No *raiz){
 
 int encontrarMaiorValor(No *raiz) {
     if (raiz == NULL)
-        return -1;  // ¡rvore vazia
+        return -1;  // √Årvore vazia
 
     while (raiz->right != NULL)
         raiz = raiz->right;
@@ -57,7 +56,7 @@ int encontrarMaiorValor(No *raiz) {
 
 int encontrarMenorValor(No *raiz) {
     if (raiz == NULL)
-        return -1;  // ¡rvore vazia
+        return -1;  // √Årvore vazia
 
     while (raiz->left != NULL)
         raiz = raiz->left;
@@ -69,7 +68,7 @@ int encontrarValorRaiz(No *raiz) {
     if (raiz != NULL)
         return raiz->dado;
     else
-        return -1;  // ¡rvore vazia
+        return -1;  // √Årvore vazia
 }
 
 int main(){
