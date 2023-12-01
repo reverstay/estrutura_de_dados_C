@@ -7,10 +7,6 @@
 #define MAX_TELEFONE 20
 #define MAX_ANIVERSARIO 6
 
-//Raphael Leite Diniz 2358549
-//Mauricio Tuyuty Lopes de Carvalho 1987291
-//Arthur Bernardes Schmidt 2129760
-
 typedef struct Contato {
     char nome[MAX_NOME];
     char email[MAX_EMAIL];
@@ -121,7 +117,7 @@ void exibir_menu_consulta() {
     printf("\nMenu de Consulta:\n");
     printf("1. Buscar por nome (ordem alfabetica)\n");
     printf("2. Buscar por email (formato: nome <email>)\n");
-    printf("3. Buscar por mes de anivers·rio\n");
+    printf("3. Buscar por mes de anivers√°rio\n");
     printf("4. Voltar ao Menu Principal\n");
 }
 
@@ -131,7 +127,7 @@ void consultar_por_nome(const Agenda* agenda, const char* nome_busca) {
         return;
     }
 
-    // Verificar se h· contatos com o nome de busca
+    // Verificar se h√° contatos com o nome de busca
     int encontrou = 0;
     Contato* atual = agenda->head;
     while (atual) {
@@ -147,7 +143,7 @@ void consultar_por_nome(const Agenda* agenda, const char* nome_busca) {
         return;
     }
 
-    // Exibir informaÁıes dos contatos com o nome correspondente
+    // Exibir informa√ß√µes dos contatos com o nome correspondente
     printf("Contatos encontrados com o nome '%s':\n", nome_busca);
     atual = agenda->head;
     while (atual) {
@@ -167,11 +163,11 @@ void consultar_por_nome(const Agenda* agenda, const char* nome_busca) {
 
 void consultar_por_email(const Agenda* agenda) {
     if (agenda->head == NULL) {
-        printf("A agenda est· vazia.\n");
+        printf("A agenda est√° vazia.\n");
         return;
     }
 
-    // Contar o n˙mero de contatos na agenda
+    // Contar o n√∫mero de contatos na agenda
     int numContatos = 0;
     Contato* atual = agenda->head;
     while (atual) {
@@ -193,7 +189,7 @@ void consultar_por_email(const Agenda* agenda) {
         i++;
     }
 
-    // Ordenar os nomes e emails em ordem alfabÈtica usando o algoritmo Bubble Sort
+    // Ordenar os nomes e emails em ordem alfab√©tica usando o algoritmo Bubble Sort
     for (int j = 0; j < numContatos - 1; j++) {
         for (int k = 0; k < numContatos - j - 1; k++) {
             if (strcmp(nomes[k], nomes[k + 1]) > 0) {
@@ -209,7 +205,7 @@ void consultar_por_email(const Agenda* agenda) {
         }
     }
 
-    // Exibir os nomes e emails em ordem alfabÈtica
+    // Exibir os nomes e emails em ordem alfab√©tica
     printf("Contatos por email:\n");
     for (int j = 0; j < numContatos; j++) {
         printf("%s\t<%s>\n", nomes[j], emails[j]);
@@ -245,7 +241,7 @@ void consultar_por_mes_aniversario(const Agenda* agenda) {
 
 void formatar_telefone(char* telefone) {
     while (1) {
-        // Remover caracteres n„o numÈricos do telefone
+        // Remover caracteres n√£o num√©ricos do telefone
         int tamanho = strlen(telefone);
         int i, j = 0;
         char telefone_formatado[MAX_TELEFONE];
@@ -256,14 +252,14 @@ void formatar_telefone(char* telefone) {
         }
         telefone_formatado[j] = '\0';
 
-        // Verificar o tamanho do n˙mero de telefone e formatar adequadamente
+        // Verificar o tamanho do n√∫mero de telefone e formatar adequadamente
         tamanho = strlen(telefone_formatado);
         if (tamanho == 11) {
             sprintf(telefone, "(%c%c) %c%c%c%c%c-%c%c%c%c", telefone_formatado[0], telefone_formatado[1],
                     telefone_formatado[2], telefone_formatado[3], telefone_formatado[4], telefone_formatado[5],
                     telefone_formatado[6], telefone_formatado[7], telefone_formatado[8], telefone_formatado[9],
                     telefone_formatado[10]);
-            break; // Saia do loop se o telefone for v·lido
+            break; // Saia do loop se o telefone for v√°lido
         } else {
             printf("Numero de telefone invalido. Utilize o formato DDD + Numero (11 digitos).\n");
             printf("Digite o telefone novamente: ");
