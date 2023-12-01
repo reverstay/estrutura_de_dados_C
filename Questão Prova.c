@@ -1,9 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Raphael Leite Diniz 2358549
-// Questão para extra da prova
-
 struct fila{
     int num;
     struct fila *next;
