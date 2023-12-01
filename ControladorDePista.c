@@ -173,6 +173,7 @@ void adicionarVoo() {
 
     // Obtenha o Modelo
     system("clear");
+    while (getchar() != '\n');
     do {
         printf("\n--------------------------ADICINANDO VOO-----------------------------\n");
         printf("\nInforme o Modelo:\n ");
