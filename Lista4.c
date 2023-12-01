@@ -3,7 +3,7 @@
 #include <string.h>
 #include <ctype.h>
 
-// Raphael Leite Diniz 2358549
+// Ramon miguel pinto marino
 
 struct lista {
     char nome[40];
